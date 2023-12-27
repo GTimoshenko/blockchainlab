@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Borrow Book</title>
+	<!-- Добавьте здесь ссылку на ваш файл стилей, если нужно -->
+</head>
+
+<body>
+
+	<h1>Borrow a Book</h1>
+
+	<form id="borrowBookForm">
+		<label for="bookId">Book ID:</label>
+		<input type="text" id="bookId" required>
+		<label for="returnDate">Return Date:</label>
+		<input type="date" id="returnDate" required>
+		<button type="button" onclick="borrowBook()">Borrow Book</button>
+	</form>
+
+	<div id="resultContainer"></div>
+
+	<script src="borrowBook.js"></script>
+</body>
+
+</html>

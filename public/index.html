@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Your Library App</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+	<h1>Welcome to Your Library App</h1>
+
+	<!-- Форма для добавления книги -->
+	<form id="addBookForm">
+		<label for="bookId">Book ID:</label>
+		<input type="text" id="bookId" required>
+		<label for="title">Title:</label>
+		<input type="text" id="title" required>
+		<label for="author">Author:</label>
+		<input type="text" id="author" required>
+		<label for="totalCopies">Total Copies:</label>
+		<input type="text" id="totalCopies" required>
+		<button type="button" onclick="addBook()">Add Book</button>
+	</form>
+
+	<!-- Место для отображения информации -->
+	<div id="infoContainer"></div>
+
+	<!-- Кнопки для перехода на другие страницы -->
+	<button onclick="window.location.href='/returnBook'">Go to Return Book</button>
+	<button onclick="window.location.href='/borrow-book'">Go to Borrow Book</button>
+	<button onclick="window.location.href='/book-form'">Go to Forms</button>
+	<button onclick="window.location.href='/book'">Go to Books</button>
+	<button onclick="window.location.href='/admin'">Get admin</button>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

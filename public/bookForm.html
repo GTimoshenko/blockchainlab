@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book Form</title>
+	<!-- Добавьте здесь ссылку на ваш файл стилей, если нужно -->
+</head>
+
+<body>
+
+	<h1>Book Form</h1>
+
+	<form id="bookForm">
+		<label for="bookId">Enter Book ID:</label>
+		<input type="text" id="bookId" required>
+		<button type="button" onclick="getBookInfo()">Get Book Info</button>
+	</form>
+
+	<div id="bookInfoContainer">
+		<p id="bookIdResult">Book ID: </p>
+		<p id="reader">Reader: </p>
+		<p id="returnDate">Return Date: </p>
+		<p id="isTaken">Is Taken: </p>
+	</div>
+
+	<script src="bookForm.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Get Book Information</title>
+</head>
+
+<body>
+
+	<h1>Get Book Information</h1>
+
+	<form id="bookForm">
+		<label for="bookId">Enter Book ID:</label>
+		<input type="text" id="bookId" required>
+		<button type="button" onclick="getBookInfo()">Get Book Info</button>
+	</form>
+
+	<div id="bookInfoContainer">
+		<p id="title">Title: </p>
+		<p id="author">Author: </p>
+		<p id="totalCopies">Total Copies: </p>
+		<p id="leftCopies">Left Copies: </p>
+	</div>
+
+	<script src="book.js"></script>
+
+</body>
+
+</html>
