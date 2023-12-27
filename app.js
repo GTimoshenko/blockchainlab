@@ -7,7 +7,7 @@ const port = 3000;
 
 const web3 = new Web3('http://127.0.0.1:7545');
 
-const contractAddress = '0x7AAe646273DC7d9bB63BE0cE2891448fc8aB60A5';
+const contractAddress = '0x925a98e0dAbC6AcECd4D68644667Eb1188c7b829';
 const abi = [
 	{
 		"constant": false,
@@ -36,37 +36,6 @@ const abi = [
 		"type": "function"
 	},
 	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "forms",
-		"outputs": [
-			{
-				"name": "bookId",
-				"type": "uint256"
-			},
-			{
-				"name": "reader",
-				"type": "address"
-			},
-			{
-				"name": "returnDate",
-				"type": "uint256"
-			},
-			{
-				"name": "isTaken",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"constant": false,
 		"inputs": [
 			{
@@ -82,6 +51,40 @@ const abi = [
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_bookId",
+				"type": "uint256"
+			}
+		],
+		"name": "returnBook",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "admin",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -120,6 +123,37 @@ const abi = [
 		"inputs": [
 			{
 				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "forms",
+		"outputs": [
+			{
+				"name": "bookId",
+				"type": "uint256"
+			},
+			{
+				"name": "reader",
+				"type": "address"
+			},
+			{
+				"name": "returnDate",
+				"type": "uint256"
+			},
+			{
+				"name": "isTaken",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
 				"type": "address"
 			}
 		],
@@ -133,40 +167,6 @@ const abi = [
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_bookId",
-				"type": "uint256"
-			}
-		],
-		"name": "returnBook",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "admin",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "constructor"
 	}
 ]
 
@@ -278,22 +278,22 @@ app.use(express.static('public'));
 
 // Обработчик маршрута для основной страницы
 app.get('/', (req, res) => {
-	res.sendFile('C:/Users/timos/OneDrive/Рабочий стол/блохчей/prevedmedved/public/index.html');
+	res.sendFile('/Users/glebushnik/Desktop/labs/blockchainlab/public/index.html');
 });
 app.get('/borrow-book', (req, res) => {
-	res.sendFile('C:/Users/timos/OneDrive/Рабочий стол/блохчей/prevedmedved/public/bbok.html');
+	res.sendFile('/Users/glebushnik/Desktop/labs/blockchainlab/public/bbok.html');
 });
 app.get('/book-form', (req, res) => {
-	res.sendFile('C:/Users/timos/OneDrive/Рабочий стол/блохчей/prevedmedved/public/bookForm.html');
+	res.sendFile('/Users/glebushnik/Desktop/labs/blockchainlab/public/bookForm.html');
 });
 app.get('/book', (req, res) => {
-	res.sendFile('C:/Users/timos/OneDrive/Рабочий стол/блохчей/prevedmedved/public/book.html');
+	res.sendFile('/Users/glebushnik/Desktop/labs/blockchainlab/public/book.html');
 });
 app.get('/returnbook', (req, res) => {
-	res.sendFile('C:/Users/timos/OneDrive/Рабочий стол/блохчей/prevedmedved/public/returnBook.html');
+	res.sendFile('/Users/glebushnik/Desktop/labs/blockchainlab/public/returnBook.html');
 });
 app.get('/admin', (req, res) => {
-	res.sendFile('C:/Users/timos/OneDrive/Рабочий стол/блохчей/prevedmedved/public/admin.html');
+	res.sendFile('/Users/glebushnik/Desktop/labs/blockchainlab/public/admin.html');
 });
 
 app.listen(port, () => {
