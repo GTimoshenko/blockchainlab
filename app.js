@@ -7,7 +7,7 @@ const port = 3000;
 
 const web3 = new Web3('http://127.0.0.1:7545');
 
-const contractAddress = '0x925a98e0dAbC6AcECd4D68644667Eb1188c7b829';
+const contractAddress = '0xec84647d447b367E23fa32FafB79e3023A43C1eF';
 const abi = [
 	{
 		"constant": false,
@@ -36,6 +36,37 @@ const abi = [
 		"type": "function"
 	},
 	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "forms",
+		"outputs": [
+			{
+				"name": "bookId",
+				"type": "uint256"
+			},
+			{
+				"name": "reader",
+				"type": "address"
+			},
+			{
+				"name": "returnDate",
+				"type": "uint256"
+			},
+			{
+				"name": "isTaken",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"constant": false,
 		"inputs": [
 			{
@@ -51,40 +82,6 @@ const abi = [
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_bookId",
-				"type": "uint256"
-			}
-		],
-		"name": "returnBook",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "admin",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -123,37 +120,6 @@ const abi = [
 		"inputs": [
 			{
 				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "forms",
-		"outputs": [
-			{
-				"name": "bookId",
-				"type": "uint256"
-			},
-			{
-				"name": "reader",
-				"type": "address"
-			},
-			{
-				"name": "returnDate",
-				"type": "uint256"
-			},
-			{
-				"name": "isTaken",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "",
 				"type": "address"
 			}
 		],
@@ -167,6 +133,40 @@ const abi = [
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_bookId",
+				"type": "uint256"
+			}
+		],
+		"name": "returnBook",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "admin",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
 	}
 ]
 
